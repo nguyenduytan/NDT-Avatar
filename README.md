@@ -17,6 +17,8 @@
 
 </div>
 
+<p align="center"><img src="docs/images/desktop.png" alt="NDT Avatar desktop preview" width="1100" /></p>
+
 <h2 align="center">✨ Features</h2>
 
 - Unicode-aware initials with Vietnamese support, NFC normalization and grapheme extraction.

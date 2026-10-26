@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — initial release candidate — 2026-10-26
+## 1.0.0 — initial release — 2026-10-26
 
 - PHP avatar API with initials, identicon and rings.
 - PNG, SVG, WebP and JSON; deterministic colors, transparency, gradients and rounded corners.
@@ -10,4 +10,4 @@
 - Docker/Nginx/PHP 8.4 deployment configuration, bounded edge cache and rate limits.
 - Core and HTTP tests, CI matrix, API specification and deployment documentation.
 
-Release candidate until the container CI job is verified. No production throughput benchmark has been performed.
+Verified by GitHub Actions run 40282776355: PHP 8.4, PHP 8.5, web and Linux containers. No production throughput benchmark has been performed.

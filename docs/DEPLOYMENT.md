@@ -73,4 +73,4 @@ Inspect `docker compose ps` and `docker compose logs --tail=100`. Run `API_URL=h
 
 ## Verification boundaries
 
-Local development used PHP 8.5.1 on Windows. The included CI matrix and container job must pass to substantiate PHP 8.4 and Linux container claims. The local machine did not have Docker installed at implementation time.
+Local development used PHP 8.5.1 on Windows. GitHub Actions run 40282776355 passed PHP 8.4/8.5, web and Linux container verification. The local machine did not have Docker installed at implementation time.

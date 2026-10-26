@@ -136,4 +136,3 @@ README must include:
 - Verify live preview, locale switch, copy controls, download controls, and API examples.
 - Verify Docker Compose starts both services.
 - Verify Git status is clean before release.
-

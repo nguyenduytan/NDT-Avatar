@@ -13,6 +13,8 @@
 
 </div>
 
+<p align="center"><img src="docs/images/desktop.png" alt="NDT Avatar desktop preview" width="1100" /></p>
+
 <h2 align="center">✨ Tính năng</h2>
 
 API tạo avatar không cần cơ sở dữ liệu, dùng PHP 8.4 trở lên. Giao diện Next.js có tiếng Anh và tiếng Việt, xuất thành website tĩnh để VPS không phải chạy Node thường trực.
