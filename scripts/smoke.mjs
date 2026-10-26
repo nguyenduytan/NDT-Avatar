@@ -11,7 +11,7 @@ const etag=svg.headers.get('etag');check(!!etag,'ETag');
 const cached=await fetch(base+path,{headers:{'If-None-Match':etag}});check(cached.status===304&&(await cached.text())==='','304 has no body');
 const head=await fetch(base+path,{method:'HEAD'});check(head.status===200&&(await head.text())===''&&Number(head.headers.get('content-length'))>0,'HEAD');
 const options=await fetch(base+path,{method:'OPTIONS'});check(options.status===204,'OPTIONS');
-for(const [path,status] of [['/unknown',404],['/api/v1/avatar?size=0',400],['/api/v1/avatar?name[]=x',400],['/api/v1/avatar?color=%22%3E%3Cscript%3E',400]]){
+for(const [path,status] of [['/api/unknown',404],['/api/v1/avatar?size=0',400],['/api/v1/avatar?name[]=x',400],['/api/v1/avatar?color=%22%3E%3Cscript%3E',400]]){
  const res=await fetch(base+path);check(res.status===status&&!!(await res.json()).error,'error '+path);
 }
 const post=await fetch(base+'/api/v1/avatar',{method:'POST'});check(post.status===405,'method restriction');
@@ -23,3 +23,4 @@ for(const format of ['png','webp','json']){
 }
 const bypass=await fetch(base+path+'&no-cache');check(bypass.headers.get('cache-control')==='no-store','cache bypass');
 console.log(`${count} HTTP assertions passed`);
+
