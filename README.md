@@ -12,12 +12,29 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/nguyenduytan/NDT-Avatar)](https://github.com/nguyenduytan/NDT-Avatar/releases)
 [![Stars](https://img.shields.io/github/stars/nguyenduytan/NDT-Avatar?style=social)](https://github.com/nguyenduytan/NDT-Avatar)
+[![Forks](https://img.shields.io/github/forks/nguyenduytan/NDT-Avatar?style=flat&logo=github)](https://github.com/nguyenduytan/NDT-Avatar/network/members)
+[![Issues](https://img.shields.io/github/issues/nguyenduytan/NDT-Avatar?logo=github)](https://github.com/nguyenduytan/NDT-Avatar/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/nguyenduytan/NDT-Avatar?logo=github)](https://github.com/nguyenduytan/NDT-Avatar/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/nguyenduytan/NDT-Avatar?logo=git)](https://github.com/nguyenduytan/NDT-Avatar/commits/main)
+[![Repo size](https://img.shields.io/github/repo-size/nguyenduytan/NDT-Avatar?logo=github)](https://github.com/nguyenduytan/NDT-Avatar)
 
 [English](README.md) · [Tiếng Việt](README.vi.md) · [Deployment](docs/DEPLOYMENT.md) · [API specification](web/public/openapi.json) · [Website](https://nguyenduytan.com)
 
 </div>
 
 <p align="center"><img src="docs/images/desktop.png" alt="NDT Avatar desktop preview" width="1100" /></p>
+
+<h2 align="center">🖼️ Product screenshots</h2>
+
+<div align="center">
+
+| Initials | Identicon | Rings |
+|:---:|:---:|:---:|
+| <img src="docs/images/playground-initials.png" alt="Initials style playground" width="300" /> | <img src="docs/images/playground-identicon.png" alt="Identicon style playground" width="300" /> | <img src="docs/images/playground-rings.png" alt="Rings style playground" width="300" /> |
+
+<p><img src="docs/images/mobile-vi.png" alt="NDT Avatar Vietnamese mobile interface" width="390" /></p>
+
+</div>
 
 <h2 align="center">✨ Features</h2>
 
@@ -175,6 +192,24 @@ npm run build
 </div>
 
 These counts describe the implementation and included tests. No throughput or public-usage claims are made. Local checks used PHP 8.5.1 and Node 24; CI is configured to verify PHP 8.4/8.5 and Docker separately.
+
+<p align="center"><img src="docs/images/capability-chart.svg" alt="Capability chart: four formats, three styles, two languages and six palettes" width="900" /></p>
+<p align="center"><img src="docs/images/verification-chart.svg" alt="Verification chart: 24 core and 18 HTTP assertions" width="900" /></p>
+
+<h2 align="center">🇻🇳 Tóm tắt tiếng Việt</h2>
+
+NDT Avatar là API avatar không cần cơ sở dữ liệu, chạy trên PHP 8.4+ và có website Next.js xuất tĩnh. Bạn có thể tạo avatar bằng một URL, chọn chữ cái, identicon hoặc vòng tròn, rồi xuất SVG, PNG, WebP hoặc JSON.
+
+- **Chạy nhanh:** `docker compose up -d --build --wait`, sau đó mở `http://localhost:8080/vi/`.
+- **API chính:** `/api/v1/avatar`; hỗ trợ tên Unicode, màu tùy chỉnh, gradient, nền trong suốt, bo góc, kích thước 16–2048 và cache HTTP.
+- **Tích hợp:** xem [hướng dẫn triển khai VPS](docs/DEPLOYMENT.md), [OpenAPI](web/public/openapi.json) và phần [API reference](#-api-reference).
+- **Ngôn ngữ:** giao diện có English và Tiếng Việt; chuyển đổi bằng nút ngôn ngữ trên website.
+
+<div align="center">
+
+[Đọc README tiếng Việt đầy đủ](README.vi.md) · [Read the full English README](README.md)
+
+</div>
 
 <h2 align="center">📚 Maintenance</h2>
 

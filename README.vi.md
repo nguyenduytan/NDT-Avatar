@@ -8,12 +8,28 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](https://nextjs.org/)
 [![CI](https://github.com/nguyenduytan/NDT-Avatar/actions/workflows/ci.yml/badge.svg)](https://github.com/nguyenduytan/NDT-Avatar/actions)
 [![MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/nguyenduytan/NDT-Avatar)](https://github.com/nguyenduytan/NDT-Avatar/releases)
+[![Stars](https://img.shields.io/github/stars/nguyenduytan/NDT-Avatar?style=social)](https://github.com/nguyenduytan/NDT-Avatar)
+[![Issues](https://img.shields.io/github/issues/nguyenduytan/NDT-Avatar?logo=github)](https://github.com/nguyenduytan/NDT-Avatar/issues)
+[![Last commit](https://img.shields.io/github/last-commit/nguyenduytan/NDT-Avatar?logo=git)](https://github.com/nguyenduytan/NDT-Avatar/commits/main)
 
 [English](README.md) · **Tiếng Việt** · [Website](https://nguyenduytan.com)
 
 </div>
 
-<p align="center"><img src="docs/images/desktop.png" alt="NDT Avatar desktop preview" width="1100" /></p>
+<p align="center"><img src="docs/images/desktop.png" alt="Ảnh chụp giao diện NDT Avatar trên desktop" width="1100" /></p>
+
+<h2 align="center">🖼️ Ảnh chụp giao diện</h2>
+
+<div align="center">
+
+| Chữ cái | Identicon | Vòng tròn |
+|:---:|:---:|:---:|
+| <img src="docs/images/playground-initials.png" alt="Playground kiểu chữ cái" width="300" /> | <img src="docs/images/playground-identicon.png" alt="Playground kiểu identicon" width="300" /> | <img src="docs/images/playground-rings.png" alt="Playground kiểu vòng tròn" width="300" /> |
+
+<p><img src="docs/images/mobile-vi.png" alt="Giao diện tiếng Việt trên mobile" width="390" /></p>
+
+</div>
 
 <h2 align="center">✨ Tính năng</h2>
 
@@ -88,6 +104,9 @@ Tên được xử lý trong request, không lưu hồ sơ. Cache tùy chọn l�
 </div>
 
 Đây là số liệu chức năng và kiểm tra trong source, không phải số người dùng hay benchmark. Kiểm tra local chạy PHP 8.5.1 và Node 24; CI được cấu hình cho PHP 8.4/8.5 và Docker.
+
+<p align="center"><img src="docs/images/capability-chart.svg" alt="Biểu đồ khả năng: 4 định dạng, 3 kiểu, 2 ngôn ngữ và 6 preset" width="900" /></p>
+<p align="center"><img src="docs/images/verification-chart.svg" alt="Biểu đồ kiểm tra: 24 core và 18 HTTP assertions" width="900" /></p>
 
 <h2 align="center">📚 Tài liệu</h2>
 
