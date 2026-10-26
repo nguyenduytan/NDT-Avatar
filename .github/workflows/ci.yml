@@ -1,0 +1,59 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.4', '8.5']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: gd, intl, mbstring
+          coverage: none
+      - run: php api/tests/run.php
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: |
+          php -S 127.0.0.1:8091 api/router.php > /tmp/php.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8091/health && break; sleep 1; done
+          node scripts/smoke.mjs
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run typecheck
+  containers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose up -d --build --wait
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/smoke.mjs
+        env:
+          API_URL: http://127.0.0.1:8080
+      - run: curl --fail http://127.0.0.1:8080/vi/
+      - if: always()
+        run: docker compose logs && docker compose down

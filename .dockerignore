@@ -1,0 +1,10 @@
+.git
+.tools
+.qa
+ui-avatars-master
+web/node_modules
+web/.next
+web/out
+api/var
+**/*.log
+.env

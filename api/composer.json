@@ -1,0 +1,9 @@
+{
+  "name": "ndt/avatar",
+  "description": "Databaseless avatar API",
+  "type": "project",
+  "license": "MIT",
+  "require": { "php": ">=8.4", "ext-gd": "*", "ext-intl": "*", "ext-mbstring": "*" },
+  "autoload": { "psr-4": { "Ndt\\": "src/" } },
+  "scripts": { "test": "php tests/run.php" }
+}

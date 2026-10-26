@@ -1,0 +1,13 @@
+ui-avatars-master/
+node_modules/
+.next/
+out/
+vendor/
+.env
+.env.*.local
+api/var/*
+!api/var/.gitkeep
+.tools/
+.qa/
+*.log
+*.tsbuildinfo
